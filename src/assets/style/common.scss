@@ -1,0 +1,226 @@
+@import "variable";
+/*清除样式*/
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4, h5, h6, i, b, textarea, button, input, select, figure, figcaption {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+  text-decoration: none;
+  border: none;
+  font-family: "Microsoft Yahei", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
+}
+
+html, body {
+  font-size: 100px;
+  height: 100%;
+  min-width: 1300px;
+}
+
+body {
+  color: $colorDarkBlack;
+  background: $colorBodyBg;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/*滚动条*/
+::-webkit-scrollbar {
+  width: 3px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+  -webkit-border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  -webkit-border-radius: 3px;
+  background-color: #C1C1C1;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  -webkit-border-radius: 3px;
+  background-color: #C1C1C1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  height: 50px;
+  background-color: $colorLinkBtn;
+  -webkit-border-radius: 4px;
+}
+
+.linkBtn {
+  color: $colorLinkBtn;
+  &:hover {
+    color: $colorLinkBtnHover;
+  }
+}
+
+/*面包屑*/
+.el-breadcrumb__item__inner a:hover, .el-breadcrumb__item__inner:hover {
+  cursor: default;
+  color: #48576a;
+}
+
+.el-breadcrumb__item:last-child .el-breadcrumb__item__inner, .el-breadcrumb__item:last-child .el-breadcrumb__item__inner a, .el-breadcrumb__item:last-child .el-breadcrumb__item__inner a:hover, .el-breadcrumb__item:last-child .el-breadcrumb__item__inner:hover {
+  color: #48576a;
+  cursor: default;
+}
+
+.el-tabs--border-card > .el-tabs__header {
+  background: $colorTitleBg;
+}
+
+.el-tabs--border-card {
+  background: transparent;
+}
+
+.el-tabs--border-card > .el-tabs__header .el-tabs__item.is-active {
+  background-color: $colorBodyBg;
+}
+
+.el-table th {
+  background: $colorTitleBg;
+}
+
+/*数据表头不换行*/
+/*特殊需求，变成换行*/
+.el-table th > .cell {
+  white-space: pre-wrap;
+  padding: 0;
+  text-align: center;
+}
+
+.el-table--small td {
+  padding: 0;
+}
+
+.el-table .cell {
+  padding: 5px;
+  text-align: center;
+  font-size: 14px;
+  .rowContent {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .el-icon-edit, .el-icon-delete {
+    margin-left: 5px;
+  }
+  .el-button {
+    padding: 5px 0;
+  }
+}
+
+.el-form-item {
+  margin-bottom: 10px;
+}
+
+.el-message {
+  top: 40%;
+}
+
+/*数据列详情*/
+.el-popover .tbPopover {
+  max-width: 260px;
+  line-height: 1.5;
+}
+
+.el-button + .el-button {
+  margin-left: 5px;
+}
+
+// 编辑、删除图标
+.el-icon-edit, .el-icon-delete {
+  color: $colorLinkBtn;
+  cursor: pointer;
+}
+
+.el-icon-edit:hover {
+  color: $colorLinkBtnHover;
+}
+
+.el-icon-delete:hover, .el-icon-delete2:hover {
+  color: #ff4949;
+}
+
+.redColor {
+  color: $colorRed;
+}
+
+//修改disable后的input框中的字体颜色
+.el-input.is-disabled .el-input__inner {
+  color: #000 !important;
+}
+
+.el-button.is-disabled {
+  color: #000 !important;
+}
+
+.el-dialog__header {
+  padding: 20px 20px 10px 20px;
+  background: #eee;
+}
+
+.el-dialog__footer {
+  background: #eee;
+}
+
+/*宽高百分百*/
+.cover {
+  height: 100%;
+  width: 100%;
+}
+
+/*超出省略显示*/
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//定位全屏
+.abCover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+//transform上下左右居中
+.trCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*说明提示文字*/
+.tip {
+  font-size: 12px;
+  color: $colorRed;
+}
+
+//清浮动
+.clearFloat:after{
+  content:"";
+  display:block;
+  clear:both;
+  visibility:hidden;
+  height:0;
+}
+.clearFloat{
+  zoom:1
+}
+
+
+
